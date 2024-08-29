@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "title": "Project 1",
+            "category": "Framework and .NET",
+            "description": "This is a project",
+            "url": "http://www.example.com"
+    
+        },
+        {
+            "title": "Project 2",
+            "category": "Software Engineering",
+            "description": "This is another project",
+            "url": "http://www.example.com"
+            
+        },
+        {
+            "title": "Project 3",
+            "category": "Web applications",
+            "description": "This is another project",
+            "url": "http://www.example.com"
+        }
+    ]
+}
