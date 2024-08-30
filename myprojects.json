@@ -1,9 +1,9 @@
 {
     "projects": [
         {
-            "title": "Project 1",
+            "title": "Airport framework using .NET",
             "category": "Framework and .NET",
-            "description": "This is a project",
+            "description": "This is a project that I did in my final year of university. It is a framework that can be used to build airport systems. It is built using .NET and C#.",
             "url": "http://www.example.com"
     
         },
