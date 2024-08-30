@@ -1,5 +1,4 @@
-{
-    "projects": [
+ [
         {
             "title": "Airport framework using .NET",
             "category": "Framework and .NET",
@@ -21,4 +20,3 @@
             "url": "http://www.example.com"
         }
     ]
-}
