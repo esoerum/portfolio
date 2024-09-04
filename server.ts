@@ -14,23 +14,27 @@ app.get('/', async (context) => {
     return context.text("Hello World");
 });
 
-app.get('/json', async (context) => {
-    const data = await fs.readFile('./myprojects.json', "utf-8");
-        // return context.json(data);
-    return context.json(JSON.parse(data));
-    // return context.json({id: 13})
-});
+//Method that retrieves all projects from the json-file
+app.get("/json", async (ctx) => {
+    const data = await fs.readFile("./myprojects.json", "utf8");
+    const dataAsJson = JSON.parse(data);
+    return ctx.json(dataAsJson);
+  });
 
-//Denne skal gjøres om og brukes til å legge til prosjekter i HTML
+//Post-method that sends in a project to the json-file
 app.post('/json', async (context) => {
-    return context.text("Hello World");
+    const data = await fs.readFile('./myprojects.json', "utf-8");
+    const projects = JSON.parse(data);
+    projects.push(context.body);
+    await fs.writeFile('./myprojects.json', JSON.stringify(projects, null, 2));
+    return context.json(context.body);
 });
 
 
 
 const port = 3999;
 
-console.log("Server is running as normal")
+console.log(`Server is running on port ${port}`);
 
 serve( {
     fetch: app.fetch,
