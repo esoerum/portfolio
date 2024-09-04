@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Espen Sørum's portfolio" />
+    <title>Portfolio - Espen Sørum</title>
+  </head>
+  <body>
+    <div id="main-container"></div>
+    <header id="main-header" class="header">
+      <img href="index.html" class="logo" alt="placeholder for logo" src="https://dummyimage.com/100x100/000/fff"></a>
+      <!--Navigation start-->
+      <h1>Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Hjem</a></li>
+          <li><a href="/about">Om</a></li>
+          <li><a href="/projects">Prosjekter</a></li>
+          <li><a href="/contact">Kontakt meg</a></li>
+        </ul>
+      </nav>
+      <!--Navigation end-->
+    </header>
+    <!--Main content start-->
+    <main>
+      <article id="intro">
+        <h2>Velkommen til min portefølje</h2>
+        <p>Her vil du finne informasjon om meg og mine prosjekter.</p>
+      </article>
+      <section id="project-wrapper" class="my-projects">
+        <h2>Mine prosjekter</h2>
+        <ul id="project-list" class="projectList">
+        </ul>
+      </section>
+      <form id="projectForm">
+        <label for="title">Tittel:</label>
+        <input type="text" id="title" name="title"  placeholder="Example: Single-page-application (SPA)" required maxlength="50">
+        <label for="category">Kategori:</label>
+        <input type="text" id="category" name="category" placeholder="Example: Javascript" required maxlength="50">
+        <label for="description">Beskrivelse:</label>
+        <textarea type="text" id="description" name="description" placeholder="Example: This project is all about...." require></textarea>
+        <label for="url">Link:</label>
+        <input type="url" id="url" name="url" placeholder="http://www.example.com" required>
+        <button type="submit" id="form-button">Legg til prosjekt</button>
+    </form>
+    </main>
+    <!--Main content end-->
+    <footer class="footer">
+      <p>&copy; 2024 Espen Sørum</p>
+    </footer>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    </div>
+  </body>
+</html>
