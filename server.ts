@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serveStatic } from "@hono/node-server/serve-static";
 import fs from "node:fs/promises";
+import { Project } from "./src/types";
 
 const app = new Hono();
 
@@ -15,19 +16,20 @@ app.get('/', async (context) => {
 });
 
 //Method that retrieves all projects from the json-file
-app.get("/json", async (ctx) => {
+app.get("/projects", async (context) => {
     const data = await fs.readFile("./myprojects.json", "utf8");
     const dataAsJson = JSON.parse(data);
-    return ctx.json(dataAsJson);
+    return context.json(dataAsJson);
   });
 
 //Post-method that sends in a project to the json-file
-app.post('/json', async (context) => {
+app.post('/projects', async (context) => {
     const data = await fs.readFile('./myprojects.json', "utf-8");
     const projects = JSON.parse(data);
-    projects.push(context.body);
+    const project: Project = await context.req.json();
+    projects.push(project);
     await fs.writeFile('./myprojects.json', JSON.stringify(projects, null, 2));
-    return context.json(context.body);
+    return context.json({message: 'Project added'});
 });
 
 
