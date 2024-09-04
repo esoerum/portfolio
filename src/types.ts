@@ -1,4 +1,4 @@
-//Definerer type for prosjekter
+//Definition of the Project type to be used in the application
 type Project = {
     title: string,
     category: string,

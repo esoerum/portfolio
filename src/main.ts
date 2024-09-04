@@ -2,31 +2,31 @@ import './style.css'
 import { Project } from './types';
 
 
-// Funksjon for å legge til prosjekter i HTML
-const addProjectsToHTML = (projects: Project[]) => {
+// Function to render projects to the DOM
+const renderProjects = (projects: Project[]) => {
     const projectList = document.getElementById('project-list');
     if (!projectList) {
         return;
     }
-    //Tømmer eksiterende prosjekter
+    //Empty the list
     projectList.innerHTML = '';
 
-    //Legger til prosjekter
+    //Add each project to the list
     projects.forEach(project => {
         const projectElement = document.createElement('li');
         projectElement.classList.add('project');
         projectElement.innerHTML = `
-            <h2>${project.title}</h2>
-            <p><strong>Category:</strong> ${project.category}</p>
+            <h3>${project.title}</h3>
+            <p>Category: ${project.category}</p>
             <p>${project.description}</p>
-            <a href="${project.url}" target="_blank">Se prosjekt</a>
+            <a href="${project.url}" target="_blank">View project</a>
         `;
         projectList.appendChild(projectElement);
     });
 }
 
 // Function to fetch projects from the server
-const fetchProjectsFromServer = async (): Promise<Project[]> => {
+const fetchProjects = async (): Promise<Project[]> => {
     try {
         const response = await fetch('http://localhost:3999/projects');
 
@@ -45,8 +45,8 @@ const fetchProjectsFromServer = async (): Promise<Project[]> => {
     }
 };
 
-fetchProjectsFromServer().then(projects => {
-    addProjectsToHTML(projects);
+fetchProjects().then(projects => {
+    renderProjects(projects);
 });
 
 // Function to add a project to the server
@@ -66,6 +66,8 @@ const addProject = async (project: Project): Promise<any> | never => {
         console.error('Error adding project:', error);
     }
 };
+
+//Event listener for the form
 document.querySelector("form")?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const project: Project = {
@@ -76,11 +78,12 @@ document.querySelector("form")?.addEventListener('submit', async (event) => {
     };
     console.log(project);
     let response = await addProject(project);
-    fetchProjectsFromServer().then(projects => {
-        addProjectsToHTML(projects);
+    fetchProjects().then(projects => {
+        renderProjects(projects);
     });
 });
-//adding http:// to the url input field
+
+//Adding http:// to the url input field
 const url = document.querySelector<HTMLInputElement>("#url")!;
 url.addEventListener("focus", () => {
     if (url.innerHTML.length === 0)
