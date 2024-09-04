@@ -1,50 +1,26 @@
 [
   {
-    "title": "Airport framework using .NET",
+    "title": "Airport Framework",
     "category": "Framework and .NET",
-    "description": "This is a project that I did in my final year of university. It is a framework that can be used to build airport systems. It is built using .NET and C#.",
+    "description": "This is a project that I did on my second year of university. It is a framework that can be used to build airports. It is built using .NET and C#.",
     "url": "http://www.example.com"
   },
   {
-    "title": "Project 2",
+    "title": "Tourtle",
     "category": "Software Engineering",
-    "description": "This is another project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vitae enim vehicula fermentum. Nulla tincidunt et lectus sed scelerisque. Nam dignissim elit et finibus auctor. Curabitur eu ex eu libero varius pellentesque sed in urna. Quisque eget sollicitudin magna, vel volutpat magna. Aenean ut lorem ac nulla fringilla malesuada. Donec velit odio, tincidunt nec leo a, pretium consequat mi. Duis eu fringilla risus, ut finibus eros. In efficitur sapien ipsum, ut scelerisque lacus pharetra vel. Nullam auctor convallis lectus, sed placerat eros blandit sit amet. Suspendisse accumsan accumsan cursus. Donec fringilla, enim congue tristique semper, nulla sem pretium ligula, id facilisis velit arcu id dolor.",
     "url": "http://www.example.com"
   },
   {
-    "title": "Project 3",
-    "category": "Web applications",
-    "description": "This is another project",
+    "title": "Architectural Design",
+    "category": "Software Engineering",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vitae enim vehicula fermentum. Nulla tincidunt et lectus sed scelerisque. Nam dignissim elit et finibus auctor. Curabitur eu ex eu libero varius pellentesque sed in urna. Quisque eget sollicitudin magna, vel volutpat magna. Aenean ut lorem ac nulla fringilla malesuada. Donec velit odio, tincidunt nec leo a, pretium consequat mi. Duis eu fringilla risus, ut finibus eros. In efficitur sapien ipsum, ut scelerisque lacus pharetra vel. Nullam auctor convallis lectus, sed placerat eros blandit sit amet. Suspendisse accumsan accumsan cursus. Donec fringilla, enim congue tristique semper, nulla sem pretium ligula, id facilisis velit arcu id dolor.",
     "url": "http://www.example.com"
   },
   {
-    "title": "sdasd",
-    "category": "asdasd",
-    "description": "asdasdasd",
-    "url": "http://dassdasd.com"
-  },
-  {
-    "title": "dsfsdfsf",
-    "category": "fsdfsdf",
-    "description": "sfsdfsdf",
-    "url": "http://dassdasd.com"
-  },
-  {
-    "title": "fsdfsd",
-    "category": "sfsdffsd",
-    "description": "sdfsfsdfsf",
-    "url": "http://dassdasd.com/memes"
-  },
-  {
-    "title": "Opprette prosjekt",
-    "category": "Tester",
-    "description": "Hello!",
-    "url": "http://fbi.com"
-  },
-  {
-    "title": "asdasd",
-    "category": "adasd",
-    "description": "sadasd",
-    "url": "http://asdsadasdasda.com"
+    "title": "Web applications",
+    "category": "Typescript",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie ante vitae enim vehicula fermentum. Nulla tincidunt et lectus sed scelerisque. Nam dignissim elit et finibus auctor. Curabitur eu ex eu libero varius pellentesque sed in urna. Quisque eget sollicitudin magna, vel volutpat magna. Aenean ut lorem ac nulla fringilla malesuada. Donec velit odio, tincidunt nec leo a, pretium consequat mi. Duis eu fringilla risus, ut finibus eros. In efficitur sapien ipsum, ut scelerisque lacus pharetra vel. Nullam auctor convallis lectus, sed placerat eros blandit sit amet. Suspendisse accumsan accumsan cursus. Donec fringilla, enim congue tristique semper, nulla sem pretium ligula, id facilisis velit arcu id dolor.",
+    "url": "http://www.example.com"
   }
 ]
