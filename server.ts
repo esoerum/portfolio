@@ -5,7 +5,6 @@ import { serveStatic } from "@hono/node-server/serve-static";
 import fs from "node:fs/promises";
 import { Project } from "./src/types";
 
-//Server setup
 const app = new Hono();
 
 app.use("/*", cors());
