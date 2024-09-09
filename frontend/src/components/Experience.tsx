@@ -16,11 +16,9 @@ export function Experience({ description }: ExperienceProps) {
             <li>
                 <Experience description={experienceOne} />
             </li>
-            <p>{description}</p>
             <li>
                 <Experience description ={experienceTwo}/>
             </li>
-            <p>{description}</p>
         </ul>
       </div>
     )
