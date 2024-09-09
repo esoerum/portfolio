@@ -1,23 +1,25 @@
-export type ExperienceProps = {
+type ExperienceProps = {
     description: string;
   }
   
-export type ExperiencesProps = {
+type ExperiencesProps = {
     experienceOne: string;
     experienceTwo: string;
     description: string;
   }
-export type HeaderProps = {
+type HeaderProps = {
     student: string;
     degree: string;
     points: number;
   }
-export type ContactProps = {
+type ContactProps = {
     email: string;
   }
-export type ProjectProps = {
+type ProjectProps = {
     title: string;
     category: string;
     description: string;
     url: string;
 }
+
+export type { ExperienceProps, ExperiencesProps, HeaderProps, ContactProps, ProjectProps };
