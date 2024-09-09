@@ -11,13 +11,19 @@ function App() {
   const experienceOne = 'Figma UI for customer X'
   const experienceTwo = 'Website for customer Y'
   const email = 'student@hiof.no'
+  //Project-example
+  const projectTitle = 'Project 1';
+  const projectCategory = 'Web-development';
+  const projectDescription = 'Web-design';
+  const projectUrl = 'https://www.example.com';
+
 
   return (
     <div>
       <Header student={student} degree={degree} points={points} />
       <Experiences experienceOne={experienceOne} experienceTwo={experienceTwo} description='Funny work' />
       <Contact email={email} />
-      <Project title='Project 1' category='Web-development' description='Web-design' url='https://www.example.com' />
+      <Project title={projectTitle} category={projectCategory} description={projectDescription} url={projectUrl} />
     </div>
   )
 }

@@ -8,7 +8,7 @@ export function Experience({ description }: ExperienceProps) {
     )
   }
 
-  export default function Experiences({ experienceOne, experienceTwo, description}: ExperiencesProps) {
+  export default function Experiences({ experienceOne, experienceTwo}: ExperiencesProps) {
     return (
       <div>
         <h2>These are my following experiences:</h2>
