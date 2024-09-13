@@ -1,11 +1,11 @@
 type ExperienceProps = {
+    id?: number;
     description: string;
   }
   
 type ExperiencesProps = {
     experienceOne: string;
     experienceTwo: string;
-    description: string;
   }
 type HeaderProps = {
     student: string;
