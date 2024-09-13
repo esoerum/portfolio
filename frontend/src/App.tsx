@@ -17,14 +17,13 @@ function App() {
   const projectDescription = 'Web-design';
   const projectUrl = 'https://www.example.com';
 
-
   return (
-    <div>
+    <>
       <Header student={student} degree={degree} points={points} />
       <Experiences experienceOne={experienceOne} experienceTwo={experienceTwo} description='Funny work' />
       <Contact email={email} />
       <Project title={projectTitle} category={projectCategory} description={projectDescription} url={projectUrl} />
-    </div>
+    </>
   )
 }
 

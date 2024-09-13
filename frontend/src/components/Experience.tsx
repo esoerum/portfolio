@@ -8,7 +8,8 @@ export function Experience({ description }: ExperienceProps) {
     )
   }
 
-  export default function Experiences({ experienceOne, experienceTwo}: ExperiencesProps) {
+  export default function Experiences(props: ExperiencesProps) {
+    const { experienceOne, experienceTwo } = props;
     return (
       <div>
         <h2>These are my following experiences:</h2>
