@@ -1,6 +1,6 @@
 import '/src/styles/App.css'
 import Header from "./components/Header";
-import Experiences from "./components/Experience";
+import Experiences from "./components/Experiences";
 import {Contact} from "./components/Contact";
 import Project from "./components/Project";
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Header student={student} degree={degree} points={points} />
-      <Experiences experienceOne={experienceOne} experienceTwo={experienceTwo} description='Funny work' />
+      <Experiences experienceOne={experienceOne} experienceTwo={experienceTwo}/>
       <Contact email={email} />
       <Project title={projectTitle} category={projectCategory} description={projectDescription} url={projectUrl} />
     </>
