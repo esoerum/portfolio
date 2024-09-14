@@ -6,7 +6,7 @@ import Experience from './Experience';
   export default function Experiences(props: ExperiencesProps) {
     const { experienceOne, experienceTwo } = props;
     return (
-      <>
+      <section>
         <h2>These are my following experiences:</h2>
         <ul>
             <li>
@@ -16,6 +16,6 @@ import Experience from './Experience';
                 <Experience description ={experienceTwo}/>
             </li>
         </ul>
-      </>
+      </section>
     )
   }
