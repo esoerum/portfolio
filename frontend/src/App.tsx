@@ -13,9 +13,13 @@ function App() {
   const email = 'student@hiof.no'
   //Project-example
   const projectTitle = 'Project 1';
-  const projectCategory = 'Web-development';
-  const projectDescription = 'Web-design';
+  const projectTitleTwo = "Project 2";
+  const projectTitleThree = "Project 3";
+  const projectTitleFour = "Project 4";
+  const projectCategory = 'Web-design';
+  const projectDescription = 'React project';
   const projectUrl = 'https://www.example.com';
+  
 
   return (
     <>
@@ -23,6 +27,9 @@ function App() {
       <Experiences experienceOne={experienceOne} experienceTwo={experienceTwo}/>
       <Contact email={email} />
       <Project title={projectTitle} category={projectCategory} description={projectDescription} url={projectUrl} />
+      <Project title={projectTitleTwo} category={projectCategory} description={projectDescription} url={projectUrl} />
+      <Project title={projectTitleThree} category={projectCategory} description={projectDescription} url={projectUrl} />
+      <Project title={projectTitleFour} category={projectCategory} description={projectDescription} url={projectUrl} />
     </>
   )
 }
