@@ -3,14 +3,14 @@ import Header from "./components/Header";
 import Experiences from "./components/Experiences";
 import { Contact } from "./components/Contact";
 // import Project from "./components/Project";
-import { ProjectProps } from './components/types';
+import { ExperienceProps, ProjectProps } from './components/types';
 import Projects from './components/Projects';
 
 function App() {
   const student = 'Halgeir Geirson'
   const degree = 'Bachelor IT'
   const points = 180
-  const experiences = [
+  const experiences: ExperienceProps[] = [
     { id: 1, description: 'Creating frameworks with .NET and C#' },
     { id: 2, description: 'Javascript / Typescript and React' },
     { id: 3, description: 'Backend development with Java' },
