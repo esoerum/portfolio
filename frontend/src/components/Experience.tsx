@@ -1,10 +1,10 @@
 import { ExperienceProps } from './types';
 
 export default function Experience(props: ExperienceProps) {
-    const { description } = props;
+    const { id, description } = props;
       return (
-        <>
-          <p>{description}</p>
-        </>
+        <ul>
+          <li>{description}</li>
+        </ul>
       )
     }

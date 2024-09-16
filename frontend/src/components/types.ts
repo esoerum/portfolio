@@ -4,8 +4,7 @@ type ExperienceProps = {
   }
   
 type ExperiencesProps = {
-    experienceOne: string;
-    experienceTwo: string;
+    experiences : ExperienceProps[];
   }
 type HeaderProps = {
     student: string;
@@ -16,10 +15,14 @@ type ContactProps = {
     email: string;
   }
 type ProjectProps = {
+    id?: number
     title: string;
     category: string;
     description: string;
     url: string;
 }
+type ProjectsProps = {
+    projects: ProjectProps[];
+}
 
-export type { ExperienceProps, ExperiencesProps, HeaderProps, ContactProps, ProjectProps };
+export type { ExperienceProps, ExperiencesProps, HeaderProps, ContactProps, ProjectProps, ProjectsProps };

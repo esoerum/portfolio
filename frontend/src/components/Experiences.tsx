@@ -1,20 +1,17 @@
-import { ExperiencesProps } from './types';
+import { ExperiencesProps, ExperienceProps } from './types';
 import Experience from './Experience';
 
 
 
   export default function Experiences(props: ExperiencesProps) {
-    const { experienceOne, experienceTwo } = props;
+    const { experiences } = props;
     return (
       <section>
         <h2>These are my following experiences:</h2>
         <ul>
-            <li>
-                <Experience description={experienceOne} />
-            </li>
-            <li>
-                <Experience description ={experienceTwo}/>
-            </li>
+          {experiences.map((experience: ExperienceProps) => (
+            <Experience key={experience.id} description={experience.description} />
+          ))}
         </ul>
       </section>
     )
