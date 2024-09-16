@@ -37,9 +37,13 @@ function App() {
   return (
     <>
       <Header student={student} degree={degree} points={points} />
-      <Experiences experiences={experiences} />
+      <Experiences experiences={experiences}>
+        {/* <p>Children element if needed for some reason</p> */}
+      </Experiences>
       <Contact email={email} />
-      <Projects projects={projects} />
+      <Projects projects={projects}>
+        {/* <p>Children element if needed for some reason</p> */}
+      </Projects>
     </>
   )
 }
