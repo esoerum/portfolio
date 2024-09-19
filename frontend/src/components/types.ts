@@ -12,7 +12,8 @@ type HeaderProps = {
     points: number;
   }
 type ContactProps = {
-    email: string;
+    email?: string;
+    onButtonClick?: (email: string) => void;
   }
 type ProjectProps = {
     id?: number

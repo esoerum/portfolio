@@ -6,8 +6,7 @@ import { Contact } from "./components/Contact";
 import { ExperienceProps, ProjectProps } from './components/types';
 import Projects from './components/Projects';
 
-function App() {
-  const student = 'Halgeir Geirson'
+const student = 'Halgeir Geirson'
   const degree = 'Bachelor IT'
   const points = 180
   const experiences: ExperienceProps[] = [
@@ -25,27 +24,21 @@ function App() {
     { title: "Prosjekt 4", category: "Python", description: "Aenean vulputate, ligula at porttitor congue, neque sapien gravida tortor, in venenatis augue risus et metus. Donec vestibulum urna in risus tincidunt, id blandit sapien tempus.", url: "www.example.com" },
 
   ]
-  // const projectTitle = 'Project 1';
-  // const projectTitleTwo = "Project 2";
-  // const projectTitleThree = "Project 3";
-  // const projectTitleFour = "Project 4";
-  // const projectCategory = 'Web-design';
-  // const projectDescription = 'React project';
-  // const projectUrl = 'https://www.example.com';
 
-
+function App() {
+  
   return (
     <>
       <Header student={student} degree={degree} points={points} />
       <Experiences experiences={experiences}>
-        {/* <p>Children element if needed for some reason</p> */}
+        {/* <p>Children element if needed later</p> */}
       </Experiences>
-      <Contact email={email} />
+      <Contact email={email}/>
       <Projects projects={projects}>
-        {/* <p>Children element if needed for some reason</p> */}
+        {/* <p>Children element if needed later</p> */}
       </Projects>
     </>
-  )
+  );
 }
 
 export default App
