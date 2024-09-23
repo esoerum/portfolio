@@ -10,7 +10,7 @@ import type { PropsWithChildren } from "react";
         {children}
         <ul>
           {experiences.map((experience: ExperienceProps) => (
-            <li><Experience key={experience.id} description={experience.description}/></li>
+            <li key={experience.id}><Experience description={experience.description}/></li>
           ))}
         </ul>
       </section>
