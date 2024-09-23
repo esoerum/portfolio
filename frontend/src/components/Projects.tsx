@@ -8,11 +8,23 @@ export default function Projects(props: Readonly<PropsWithChildren<ProjectsProps
         <section>
             <h2>Projects</h2>
             {children}
-            <ul className="project-ul">
-                {projects.map((project: ProjectProps) => (
-                    <li key={project.id || project.title}><Project id={project.id} title={project.title} category={project.category} description={project.description} url={project.url} /></li>
-                ))}
-            </ul>
+            {projects.length === 0 ? (
+                <p>No projects available.</p>
+            ) : (
+                <ul className="project-ul">
+                    {projects.map((project: ProjectProps) => (
+                        <li key={project.id || project.title}>
+                            <Project 
+                                id={project.id} 
+                                title={project.title} 
+                                category={project.category} 
+                                description={project.description} 
+                                url={project.url} 
+                            />
+                        </li>
+                    ))}
+                </ul>
+            )}
         </section>
     )
 }
