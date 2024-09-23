@@ -12,9 +12,9 @@ export default function ContactForm(props: ContactFormProps) {
 	const sendMessage = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (!name || !text) return;
+		onContactButtonClicked(name, text);
 		setName("");
 		setText("");
-		onContactButtonClicked(name, text);
 	};
 
 	return (
