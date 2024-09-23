@@ -8,11 +8,16 @@ import type { PropsWithChildren } from "react";
       <section>
         <h2>These are my following experiences:</h2>
         {children}
+        {experiences.length === 0 ? (
+          <p>No experiences available.</p>
+        ) : (
         <ul>
           {experiences.map((experience: ExperienceProps) => (
             <li key={experience.id}><Experience description={experience.description}/></li>
           ))}
         </ul>
+        )}
       </section>
+        
     )
   }
