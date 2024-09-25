@@ -1,9 +1,15 @@
+import CreateProjectForm from './CreateProjectForm';
 import Project from './Project';
 import { ProjectProps, ProjectsProps } from './types';
 import type { PropsWithChildren } from "react";
 
 export default function Projects(props: Readonly<PropsWithChildren<ProjectsProps>>) {
     const { projects = [], children } = props;
+
+    const handleOnCreateProjectButtonClicked = (title: string, category: string, description: string, url: string) => {
+        console.log("Project created: ", title, category, description, url);
+    }
+
     return (
         <section>
             <h2>Projects</h2>
@@ -25,6 +31,8 @@ export default function Projects(props: Readonly<PropsWithChildren<ProjectsProps
                     ))}
                 </ul>
             )}
+            <CreateProjectForm onCreateProjectButtonClicked={handleOnCreateProjectButtonClicked} />
+            
         </section>
     )
 }
