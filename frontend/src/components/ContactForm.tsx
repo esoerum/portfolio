@@ -9,7 +9,7 @@ export default function ContactForm(props: ContactFormProps) {
 	const [name, setName] = useState("");
 	const [text, setText] = useState("");
 
-	const sendMessage = (event: React.FormEvent<HTMLFormElement>) => {
+	const submitContactForm = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (!name || !text) return;
 		onContactButtonClicked(name, text);
@@ -19,7 +19,7 @@ export default function ContactForm(props: ContactFormProps) {
 
 	return (
 		<section>
-			<form onSubmit={sendMessage} className="project-form">
+			<form onSubmit={submitContactForm} className="project-form">
 				<label htmlFor="name">Name:</label>
 				<input
 					type="text"
