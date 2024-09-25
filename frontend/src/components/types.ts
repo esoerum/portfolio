@@ -16,7 +16,7 @@ type ContactProps = {
     onButtonClick?: (email: string) => void;
   }
 type ProjectProps = {
-    id?: number
+    id: number
     title: string;
     category: string;
     description: string;
@@ -24,6 +24,7 @@ type ProjectProps = {
 }
 type ProjectsProps = {
     projects: ProjectProps[];
+    onRemoveProjectButtonClicked: (id: number) => void;
 }
 
 export type { ExperienceProps, ExperiencesProps, HeaderProps, ContactProps, ProjectProps, ProjectsProps };
