@@ -22,7 +22,7 @@ const email = "student@hiof.no";
 
 function App() {
 	const [projectsList, setProjectsList] = useState<ProjectProps[]>([]);
-
+	//Initializing the data from the server
 	const initializeData = () => {
 		console.log("fetching data");
 		ofetch("http://localhost:3000/projects")
@@ -35,10 +35,10 @@ function App() {
 				console.error("Error fetching projects:", error);
 			});
 	};
-
 	useEffect(() => {
 		initializeData();
 	}, []);
+
 	//Handling the creation of a new project
 	const handleOnCreateProjectButtonClicked = (
 		title: string,
