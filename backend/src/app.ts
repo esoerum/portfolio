@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { UUID } from "node:crypto";
 import fs from "node:fs/promises";
+
 type Project = {
 	id: UUID;
 	title: string;
@@ -14,20 +15,18 @@ const app = new Hono();
 
 app.use("/*", cors());
 
+// Route to get all projects
 app.get("/projects", async (context) => {
 	const data = await fs.readFile("./src/projects.json", "utf8");
 	const dataAsJson = JSON.parse(data);
 	return context.json(dataAsJson);
-	// return c.json(dummyData);
 });
-
+// Route to add a new project
 app.put("/projects", async (c) => {
 	const data = await fs.readFile("./src/projects.json", "utf-8");
 	const projects = JSON.parse(data);
 	const project = await c.req.json() as Project;
 	project.createdAt = new Date();
-	//Validation
-	
 	projects.push(project);
 	await fs.writeFile(
 		"./src/projects.json",
@@ -36,6 +35,7 @@ app.put("/projects", async (c) => {
 	return c.json(project);
 	
 });
+// Route to delete a project
 app.delete("/projects/:id", async (c) => {
 	const id = c.req.param("id");
 	const data = await fs.readFile("./src/projects.json", "utf-8");
@@ -51,9 +51,5 @@ app.delete("/projects/:id", async (c) => {
 	);
 	return c.json({ message: "Project deleted" });
 });
-// app.delete("/projects/:id", (c) => {
-//     const id = c.req.param("id");
-//     dummyData = dummyData.filter((project) => project.id !== id);
-//     return c.json({ message: "Project deleted" });
-// });
+
 export default app;
