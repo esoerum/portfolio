@@ -21,6 +21,7 @@ type ProjectProps = {
     category: string;
     description: string;
     url: string;
+    createdAt?: Date;
 }
 type ProjectsProps = {
     projects: ProjectProps[];
