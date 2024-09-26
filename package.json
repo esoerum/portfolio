@@ -1,7 +1,7 @@
 {
     "scripts": {
-        "dev:frontend": "cd /frontend && pnpm run dev",
-        "dev:backend": "cd /backend && pnpm run dev",
+        "dev:frontend": "cd frontend && pnpm run dev",
+        "dev:backend": "cd backend && pnpm run dev",
         "build": "tsc && vite build",
         "preview": "vite preview",
         "dev": "concurrently -n frontend,backend -c green,blue \"pnpm run dev:frontend\" \"pnpm run dev:backend\" "
