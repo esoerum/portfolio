@@ -1,34 +1,12 @@
 import Project from "./Project";
 import { ProjectProps, ProjectsProps } from "./types";
 import type { PropsWithChildren } from "react";
-import { ofetch } from "ofetch";
-import React, { useState, useEffect } from "react";
 
 
 export default function Projects(
 	props: Readonly<PropsWithChildren<ProjectsProps>>
 ) {
-	const {children, onRemoveProjectButtonClicked } = props;
-	const [projects, setProjects] = useState<ProjectProps[]>([]);
-	
-	const initializeData = () => {
-        console.log("fetching data");
-        ofetch("http://localhost:3000/projects")
-            .then((projects: ProjectProps[]) => {
-                console.log("data fetched");
-                setProjects(projects);
-                console.log("data initialized");
-            })
-            .catch((error) => {
-                console.error("Error fetching projects:", error);
-            });
-    };
-
-    useEffect(() => {
-        initializeData();
-    }, []);
-
-
+	const {children, onRemoveProjectButtonClicked, projects } = props;
 	return (
 		<section>
 			<h2>Projects</h2>
