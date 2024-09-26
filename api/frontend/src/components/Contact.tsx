@@ -19,7 +19,7 @@ import { useState } from 'react';
     return (
       <div>
         <h3>Contact</h3>
-        <button onClick={() => alert("Contact me on: "+ email) }>Display E-mail</button>
+        <button onClick={() => alert("Contact me on: "+ email) } className="contact-button">Display E-mail</button>
         <ContactForm onContactButtonClicked={handleOnConctactButtonClicked}/>
         <pre>{contactData ? JSON.stringify(contactData, null, 2) : "No form data submitted yet"}</pre>
         <button onClick={handleOnResetButtonClicked}>Reset data</button>
