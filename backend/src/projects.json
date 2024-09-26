@@ -2,7 +2,7 @@
   {
     "id": "bcff8d4d-7c83-4a36-aff3-2e140dd3da8bs",
     "title": "Python",
-    "description": "Scripting and automation",
+    "description": "Scripting and automation like a legend",
     "createdAt": "2024-01-04T00:00:00.000Z",
     "category": [
       "scripting"
@@ -11,53 +11,11 @@
   {
     "id": "d0d20e67-89e1-4b13-9811-81c1a8eda12a",
     "title": "Web Development",
-    "description": "Building web applications",
+    "description": "Building web applications with modern technologies",
     "createdAt": "2024-01-04T00:00:00.000Z",
+    "url": "www.example.com",
     "category": [
       "react"
     ]
-  },
-  {
-    "id": "378af60c-0901-473e-8f62-d5d90632ca6c",
-    "title": "Kubernetes",
-    "description": "Container orchestration",
-    "createdAt": "2024-01-04T00:00:00.000Z",
-    "category": [
-      "devops"
-    ]
-  },
-  {
-    "id": "6554488e-64eb-4ed1-9bbd-48e2e4d1ec09",
-    "title": "Docker",
-    "description": "Containerization platform",
-    "createdAt": "2024-01-04T00:00:00.000Z",
-    "category": [
-      "devops"
-    ]
-  },
-  {
-    "id": "c7bdda7b-a735-489e-b9fc-32cec931a175",
-    "title": "Java Programming",
-    "description": "Object-oriented programming",
-    "createdAt": "2024-01-04T00:00:00.000Z",
-    "category": [
-      "java"
-    ]
-  },
-  {
-    "id": "ba807d9f-6051-403c-8242-594ede7b372f",
-    "title": "Single-Page-App",
-    "category": "Javascript",
-    "description": "This is my funny project.",
-    "url": "www.example.com",
-    "createdAt": "2024-09-26T18:00:38.743Z"
-  },
-  {
-    "id": "cd10de67-71d9-4930-b9b6-a562f260e542",
-    "title": "TEST1",
-    "category": "ASD",
-    "description": "ASD",
-    "url": "",
-    "createdAt": "2024-09-26T18:25:31.001Z"
   }
 ]
