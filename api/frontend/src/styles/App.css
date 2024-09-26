@@ -158,6 +158,9 @@ button:hover {
   background-color: #005B99;
 
 }
+.contact-button {
+  margin-bottom: 1rem;
+}
 footer {
   grid-area: footer;
   background-color: #242424;
