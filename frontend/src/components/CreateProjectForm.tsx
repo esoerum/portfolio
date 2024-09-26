@@ -13,7 +13,7 @@ export default function CreateProjectForm(props: CreateProjectFormProps) {
 
     const createProject = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!title || !category || !description || !url) return;
+        if (!title || !category || !description) return;
         onCreateProjectButtonClicked(title, category, description, url);
         setTitle("");
         setCategory("");

@@ -26,15 +26,15 @@ app.put("/projects", async (c) => {
 	const projects = JSON.parse(data);
 	const project = await c.req.json() as Project;
 	project.createdAt = new Date();
+	//Validation
+	
 	projects.push(project);
 	await fs.writeFile(
 		"./src/projects.json",
 		JSON.stringify(projects, null, 2)
 	);
 	return c.json(project);
-	// let project = await c.req.json();
-	// //Validering
-	// dummyData.push(project);
+	
 });
 app.delete("/projects/:id", async (c) => {
 	const id = c.req.param("id");

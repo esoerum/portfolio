@@ -39,34 +39,49 @@ function App() {
 	useEffect(() => {
 		initializeData();
 	}, []);
-
+	//Handling the creation of a new project
 	const handleOnCreateProjectButtonClicked = (
 		title: string,
 		category: string,
 		description: string,
 		url: string
-	) => {
+	  ) => {
 		console.log("Project created: ", title, category, description, url);
 		const project = {
-			id: crypto.randomUUID(),
-			title: title,
-			category: category,
-			description: description,
-			url: url,
+		  id: crypto.randomUUID(),
+		  title: title,
+		  category: category,
+		  description: description,
+		  url: url,
 		};
-		setProjectsList((projectsList) => [...projectsList, project]);
-	};
+		ofetch("http://localhost:3000/projects", {
+		  method: "PUT",
+		  body: JSON.stringify(project),
+		  headers: {
+			"Content-Type": "application/json",
+		  },
+		})
+		  .then((response: { message: string; project: ProjectProps }) => {
+			console.log(response.message);
+			initializeData();
+		  })
+		  .catch((error) => {
+			console.error("Error creating project:", error);
+		  });
+	  };
+	//Handling the removal of a project
 	const handleOnRemoveProjectButtonClicked = (id: string) => {
 		console.log("Project removed: ", id);
-		ofetch(`http://localhost:3000/projects/${id}`, {method: "DELETE"})
-			.then((response: {message: string}) => {
-				console.log(response);
-				
-				initializeData();
-			})
-			.catch((error) => {
-				console.error("Error deleting project:", error);
-			});
+		ofetch(`http://localhost:3000/projects/${id}`, { method: "DELETE" })
+		  .then((response: { message: string }) => {
+			console.log(response.message);
+			setProjectsList((projectsList) =>
+			  projectsList.filter((project) => project.id !== id)
+			);
+		  })
+		  .catch((error) => {
+			console.error("Error deleting project:", error);
+		  });
 	};
 	return (
 		<>

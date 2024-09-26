@@ -20,7 +20,7 @@ type ProjectProps = {
     title: string;
     category: string;
     description: string;
-    url: string;
+    url?: string;
     createdAt?: Date;
 }
 type ProjectsProps = {
