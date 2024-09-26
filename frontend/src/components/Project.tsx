@@ -8,7 +8,7 @@ export default function Project(props: Readonly<PropsWithChildren<ProjectProps>>
            <h3>{title}</h3>
            <p>Category: {category}</p>
            <p>{description}</p>
-           <a href={url}>View Project</a>
+           {url ? <a href={url}>View Project</a> : null}
            {children}
        </article>
     )
