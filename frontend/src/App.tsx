@@ -9,8 +9,8 @@ import CreateProjectForm from "./components/CreateProjectForm";
 import { useEffect, useState } from "react";
 import { ofetch } from "ofetch";
 
-const student = "Halgeir Geirson";
-const degree = "Bachelor IT";
+const student = "Espen Sørum";
+const degree = "Bachelor in Informatics";
 const points = 180;
 const experiences: ExperienceProps[] = [
 	{ id: 1, description: "Creating frameworks with .NET and C#" },
