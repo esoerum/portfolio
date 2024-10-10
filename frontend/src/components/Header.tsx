@@ -3,7 +3,7 @@ import { HeaderProps } from "./types"
     const { student, degree, points } = props;
     return (
       <header>
-        <h1>{student}</h1>
+        <h2>{student}</h2>
         <p>{degree} - {points} points</p>
       </header>
     )
