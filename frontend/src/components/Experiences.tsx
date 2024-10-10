@@ -6,7 +6,7 @@ import type { PropsWithChildren } from "react";
     const { experiences, children } = props;
     return (
       <section>
-        <h2>These are my following experiences:</h2>
+        <h3>These are my following experiences:</h3>
         {children}
         {experiences.length === 0 ? (
           <p>No experiences available.</p>
