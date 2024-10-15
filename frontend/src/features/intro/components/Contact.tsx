@@ -1,4 +1,4 @@
-import ContactForm from '../../../components/ContactForm';
+import ContactForm from './ContactForm';
 import { useState } from 'react';
 
 export type ContactProps = {
