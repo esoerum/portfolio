@@ -1,5 +1,5 @@
 import "/src/styles/App.css";
-import IntroHeader from "./components/IntroHeader.tsx";
+import IntroHeader from "./features/intro/components/IntroHeader.tsx";
 import Experiences from "./features/experiences/components/Experiences.tsx";
 import { Contact } from "./features/intro/components/Contact.tsx";
 import { ProjectProps } from "./features/projects/components/Project.tsx";
