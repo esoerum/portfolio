@@ -1,5 +1,5 @@
-import Project from "./Project";
-import { ProjectProps, ProjectsProps } from "./types";
+import Project from "./Project.tsx";
+import { ProjectProps, ProjectsProps } from "./Project.tsx";
 import type { PropsWithChildren } from "react";
 
 

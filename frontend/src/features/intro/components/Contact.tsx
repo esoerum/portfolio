@@ -1,6 +1,10 @@
-import ContactForm from './ContactForm';
-import { ContactProps } from './types'
+import ContactForm from '../../../components/ContactForm';
 import { useState } from 'react';
+
+export type ContactProps = {
+  email?: string;
+  onButtonClick?: (email: string) => void;
+}
 
  export function Contact(props: ContactProps) {
   const { email } = props;

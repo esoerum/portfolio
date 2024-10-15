@@ -1,7 +1,10 @@
-import { ExperiencesProps, ExperienceProps } from './types';
+import { ExperienceProps } from './Experience';
 import Experience from './Experience';
 import type { PropsWithChildren } from "react";
 
+export type ExperiencesProps = {
+  experiences : ExperienceProps[];
+}
   export default function Experiences(props: Readonly<PropsWithChildren<ExperiencesProps>>) {
     const { experiences, children } = props;
     return (

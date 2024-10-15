@@ -1,5 +1,17 @@
-import { ProjectProps } from './types';
 import type { PropsWithChildren } from "react";
+
+export type ProjectProps = {
+    id: string;
+    title: string;
+    category: string;
+    description: string;
+    url?: string;
+    createdAt?: Date;
+}
+export type ProjectsProps = {
+    projects: ProjectProps[];
+    onRemoveProjectButtonClicked: (id: string) => void;
+}
 
 export default function Project(props: Readonly<PropsWithChildren<ProjectProps>>) {
     const { title, category, description, url, children } = props

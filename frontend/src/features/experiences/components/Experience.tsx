@@ -1,6 +1,7 @@
-import { ExperienceProps } from './types';
-
-
+export type ExperienceProps = {
+  id?: number;
+  description: string;
+}
 export default function Experience(props: ExperienceProps) {
     const { description } = props;
       return (

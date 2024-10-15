@@ -1,5 +1,9 @@
-import { HeaderProps } from "./types"
-  export default function Header(props: HeaderProps) {
+export type IntroHeaderProps = {
+  student: string;
+  degree: string;
+  points: number;
+}
+  export default function Header(props: IntroHeaderProps) {
     const { student, degree, points } = props;
     return (
       <header>

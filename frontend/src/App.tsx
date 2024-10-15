@@ -1,14 +1,15 @@
 import "/src/styles/App.css";
-import Header from "./components/Header";
-import Experiences from "./components/Experiences";
-import { Contact } from "./components/Contact";
-// import Project from "./components/Project";
-import { ExperienceProps, ProjectProps } from "./components/types";
-import Projects from "./components/Projects";
-import CreateProjectForm from "./components/CreateProjectForm";
+import IntroHeader from "./components/IntroHeader.tsx";
+import Experiences from "./features/experiences/components/Experiences.tsx";
+import { Contact } from "./features/intro/components/Contact.tsx";
+import { ProjectProps } from "./features/projects/components/Project.tsx";
+import { ExperienceProps } from "./features/experiences/components/Experience.tsx";
+import Projects from "./features/projects/components/Projects.tsx";
+import CreateProjectForm from "./features/projects/components/CreateProjectForm.tsx";
 import { useEffect, useState } from "react";
 import { ofetch } from "ofetch";
 
+//Flytte ut hardkodede data til en egen fil, config fil eller lignende
 const student = "Espen Sørum";
 const degree = "Bachelor in Informatics";
 const points = 180;
@@ -23,6 +24,7 @@ const email = "student@hiof.no";
 function App() {
 	const [projectsList, setProjectsList] = useState<ProjectProps[]>([]);
 	//Initializing the data from the server
+	//Endre feilhåndtering til å bruke state eller try/catch
 	const initializeData = () => {
 		console.log("fetching data");
 		ofetch("http://localhost:3000/projects")
@@ -84,8 +86,8 @@ function App() {
 		  });
 	};
 	return (
-		<>
-			<Header student={student} degree={degree} points={points} />
+		<> {/* Eventuelt flytte ut header, experiences og contact. Disse gjenbrukes ikke, kanskje de skal pakkes inn i en intro-komponent*/}
+			<IntroHeader student={student} degree={degree} points={points} />
 			<Experiences experiences={experiences}>
 				{/* <p>Children element if needed later</p> */}
 			</Experiences>
