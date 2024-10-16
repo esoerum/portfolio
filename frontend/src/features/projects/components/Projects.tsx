@@ -9,7 +9,7 @@ export default function Projects(
 	const {children, onRemoveProjectButtonClicked, projects } = props;
 	return (
 		<section>
-			<h2>Projects</h2>
+			<h2>My Projects</h2>
 			{children}
 			{projects.length === 0 ? (
 				<p>No projects available.</p>
