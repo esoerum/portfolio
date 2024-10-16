@@ -1,18 +1,25 @@
 import { ofetch } from "ofetch";
 import { ProjectProps } from "../components/Project";
 import { endpoints } from "../../../config/urls";
-// import { projectSchema, projectsSchema } from "../helpers/validate";
+import { projectSchema, projectsSchema } from "../helpers/validate";
 
 //API service for handling projects
 const url = endpoints.projects;
 //Fetching the projects from the server
 export const fetchProjects = async (): Promise<ProjectProps[]> => {
     const projects = await ofetch(url);
+
+    //Validating the projects
+    projectsSchema.parse(projects);
     return projects;
 };
 
 //Creating a new project
 export const createProject = async (project: ProjectProps) => {
+
+    //Validating the project
+    projectSchema.parse(project);
+
     return ofetch(url, {
         method: "PUT",
         body: JSON.stringify(project),
