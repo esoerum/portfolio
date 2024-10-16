@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 
-export { projectSchema, projectsSchema };
+
 
 // Zod validation schema for a project
 const projectSchema = z.object({
@@ -14,3 +14,5 @@ const projectSchema = z.object({
 });
 
 const projectsSchema = z.array(projectSchema);
+
+export { projectSchema, projectsSchema };
