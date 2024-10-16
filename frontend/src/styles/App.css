@@ -30,6 +30,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #333;
+  
 
 }
 body {
@@ -38,8 +39,8 @@ body {
   /*Skal jeg ha med denne? Tenk på det*/
 }
 #logo {
-  width: 150px; /* Adjust the width as needed */
-  height: auto; /* Keeps the aspect ratio */
+  width: 150px; 
+  height: auto; 
 }
 nav ul {
   display: flex;
