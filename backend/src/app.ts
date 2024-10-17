@@ -3,6 +3,9 @@ import { cors } from "hono/cors";
 import { UUID } from "node:crypto";
 import fs from "node:fs/promises";
 
+
+//Ha med V1 i /api/v1/projects
+
 type Project = {
 	id: UUID;
 	title: string;
