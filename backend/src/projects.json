@@ -16,23 +16,5 @@
     "url": "www.example.com",
     "isPublicProject": true,
     "createdAt": "2024-10-23T12:12:13.165Z"
-  },
-  {
-    "id": "019eec30-3e5e-4aeb-a471-92db340ea78a",
-    "title": "asdas",
-    "category": "asda",
-    "description": "asd",
-    "url": "asdasd",
-    "isPublicProject": true,
-    "createdAt": "2024-10-23T15:55:35.445Z"
-  },
-  {
-    "id": "67b3a73b-4dd3-42ea-9163-b6fff54e104e",
-    "title": "test2",
-    "category": "asdsad",
-    "description": "asdasdasd",
-    "url": "",
-    "isPublicProject": false,
-    "createdAt": "2024-10-23T15:55:52.735Z"
   }
 ]

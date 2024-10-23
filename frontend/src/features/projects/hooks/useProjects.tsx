@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { ProjectProps } from "../components/Project";
 import { fetchProjects, createProject, deleteProject } from "../services/api";
+// import { is } from "date-fns/locale";
 
 //Custom hook for handling projects
 export function useProjects() {
@@ -41,6 +42,11 @@ export function useProjects() {
             };
             const response = await createProject(project);
             console.log("Created project:", response);
+            if (isPublicProject===true){
+                console.log("Public project");
+            } else {
+                console.log("Private project");
+            }
             initializeData();
         } catch (error) {
             console.error("Error creating project:", error);

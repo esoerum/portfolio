@@ -62,19 +62,19 @@ export default function CreateProjectForm(props: CreateProjectFormProps) {
                     placeholder="http://www.example.com"
                     onChange= {(e) => setUrl(e.target.value)}
                 />
-                 {/* Toggle switch for public */}
-                  {/* Toggle switch for public */}
-                <div className="toggle-wrapper">
-                    <label htmlFor="public">Make project public:</label>
-                    <input
-                        type="checkbox"
-                        id="public"
-                        name="public"
-                        checked={isPublic}
-                        onChange={(e) => setIsPublic(e.target.checked)}
-                    />
-                    <div className="toggle-switch"></div>
-                </div>
+                 <div className="toggle-wrapper">
+    <label htmlFor="public">
+        Make project public:
+        <input
+            type="checkbox"
+            id="public"
+            name="public"
+            checked={isPublic}
+            onChange={(e) => setIsPublic(e.target.checked)}
+        />
+        <div className="toggle-switch"></div>
+    </label>
+</div>
                 <button type="submit" id="form-button">Submit project</button>
             </form>
         </section>

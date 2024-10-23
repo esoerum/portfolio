@@ -170,7 +170,10 @@ button:hover {
 
 /* Hide the default checkbox */
 input[type="checkbox"] {
-  display: none; /* Hide the checkbox */
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute; /* Make sure it's still in the DOM for interaction */
 }
 
 /* Custom toggle style */
@@ -209,9 +212,6 @@ input[type="checkbox"]:checked + .toggle-switch::after {
 
 /* Project visibility styles */
 .project-visibility {
-  position: absolute; /* Position the visibility indicator absolutely */
-  top: 1rem; /* Adjust to your preference */
-  left: 1rem; /* Adjust to your preference */
   display: flex;
   align-items: center; /* Center icon and text vertically */
   padding: 0.2rem 0.5rem; /* Optional padding */
