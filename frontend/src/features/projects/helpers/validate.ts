@@ -7,10 +7,10 @@ import { z } from "zod";
 const projectSchema = z.object({
     id: z.string().uuid(),
     title: z.string(),
-    category: z.string(),
+    category: z.union([z.string(), z.array(z.string())]),
     description: z.string(),
-    url: z.string(),
-    createdAt: z.date().optional(),
+    url: z.string().optional(),
+    createdAt: z.string().transform((str) => new Date(str)).optional(),
 });
 
 const projectsSchema = z.array(projectSchema);
