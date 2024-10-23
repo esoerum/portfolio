@@ -1,3 +1,4 @@
+import { capitalizeFirstLetter, formatDistance } from "../helpers/format.ts";
 import Project from "./Project.tsx";
 import { ProjectProps, ProjectsProps } from "./Project.tsx";
 import type { PropsWithChildren } from "react";
@@ -25,6 +26,10 @@ export default function Projects(
 									description={project.description}
 									url={project.url}
 								>
+									<p>
+									Published: {" "}
+										{project.createdAt ? formatDistance(new Date(project.createdAt)) : "unknown"}
+									</p>
 									<button
 										onClick={() =>
 											onRemoveProjectButtonClicked(
@@ -48,7 +53,7 @@ export default function Projects(
 							}, {} as Record<string, number>)
 						).map(([category, count]) => (
 							<li key={category}>
-								{category}: {count}
+								{capitalizeFirstLetter(category)}: {count}
 							</li>
 						))}
 					</ul>
