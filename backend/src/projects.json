@@ -1,21 +1,18 @@
 [
   {
-    "id": "bcff8d4d-7c83-4a36-aff3-2e140dd3da8bs",
+    "id": "e11f38b1-cd99-43bc-9554-1330d8939e87",
     "title": "Python",
+    "category": "Scripting",
     "description": "Scripting and automation like a legend",
-    "createdAt": "2024-01-04T00:00:00.000Z",
-    "category": [
-      "scripting"
-    ]
+    "url": "www.example.com",
+    "createdAt": "2024-10-23T12:11:58.461Z"
   },
   {
-    "id": "d0d20e67-89e1-4b13-9811-81c1a8eda12a",
+    "id": "844e9b25-3ab3-45e7-8472-b1b419ac1448",
     "title": "Web Development",
+    "category": "react",
     "description": "Building web applications with modern technologies",
-    "createdAt": "2024-01-04T00:00:00.000Z",
     "url": "www.example.com",
-    "category": [
-      "react"
-    ]
+    "createdAt": "2024-10-23T12:12:13.165Z"
   }
 ]
