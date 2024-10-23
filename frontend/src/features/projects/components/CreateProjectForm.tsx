@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export type CreateProjectFormProps = {
-    onCreateProjectButtonClicked: (title: string, category: string, description: string, url: string) => void;
+    onCreateProjectButtonClicked: (title: string, category: string, description: string, url: string, isPublic: boolean) => void;
 };
 
 export default function CreateProjectForm(props: CreateProjectFormProps) {
@@ -10,15 +10,17 @@ export default function CreateProjectForm(props: CreateProjectFormProps) {
     const [category, setCategory] = useState("");
     const [description, setDescription] = useState("");
     const [url, setUrl] = useState("");
+    const [isPublic, setIsPublic] = useState(false);
 
     const createProject = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (!title || !category || !description) return;
-        onCreateProjectButtonClicked(title, category, description, url);
+        onCreateProjectButtonClicked(title, category, description, url, isPublic);
         setTitle("");
         setCategory("");
         setDescription("");
         setUrl("");
+        setIsPublic(false);
     };
 
     return (
@@ -60,6 +62,19 @@ export default function CreateProjectForm(props: CreateProjectFormProps) {
                     placeholder="http://www.example.com"
                     onChange= {(e) => setUrl(e.target.value)}
                 />
+                 {/* Toggle switch for public */}
+                  {/* Toggle switch for public */}
+                <div className="toggle-wrapper">
+                    <label htmlFor="public">Make project public:</label>
+                    <input
+                        type="checkbox"
+                        id="public"
+                        name="public"
+                        checked={isPublic}
+                        onChange={(e) => setIsPublic(e.target.checked)}
+                    />
+                    <div className="toggle-switch"></div>
+                </div>
                 <button type="submit" id="form-button">Submit project</button>
             </form>
         </section>

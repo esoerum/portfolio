@@ -13,6 +13,7 @@ type Project = {
 	description: string;
 	url: string;
 	createdAt?: Date;
+	isPublicProject: boolean;
 };
 const app = new Hono();
 

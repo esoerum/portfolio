@@ -27,7 +27,8 @@ export function useProjects() {
         title: string,
         category: string,
         description: string,
-        url: string
+        url: string,
+        isPublicProject: boolean
     ) => {  
         try {
             const project = {
@@ -36,6 +37,7 @@ export function useProjects() {
                 category: category,
                 description: description,
                 url: url,
+                isPublicProject
             };
             const response = await createProject(project);
             console.log("Created project:", response);

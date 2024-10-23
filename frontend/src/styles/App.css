@@ -159,9 +159,95 @@ button:hover {
   background-color: #005B99;
 
 }
+
+/* Toggle switch styles */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none; /* Hide the checkbox */
+}
+
+/* Custom toggle style */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Slider (the toggle knob) */
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When the checkbox is checked, change background and move the knob */
+input[type="checkbox"]:checked + .toggle-switch {
+  background-color: #007ACC;
+}
+
+input[type="checkbox"]:checked + .toggle-switch::after {
+  transform: translateX(26px);
+}
+
+/* Project visibility styles */
+.project-visibility {
+  position: absolute; /* Position the visibility indicator absolutely */
+  top: 1rem; /* Adjust to your preference */
+  left: 1rem; /* Adjust to your preference */
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  padding: 0.2rem 0.5rem; /* Optional padding */
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Public and private styles */
+.project-visibility.public {
+  background-color: #007ACC; /* Blue for public projects */
+  color: #fff;
+}
+
+.project-visibility.private {
+  background-color: #FF5722; /* Red for private projects */
+  color: #fff;
+}
+
+/* Icon styles */
+.icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+.icon.public {
+  color: green; /* Color for public projects */
+}
+
+.icon.private {
+  color: red; /* Color for private projects */
+}
+
 .contact-button {
   margin-bottom: 1rem;
 }
+
 footer {
   grid-area: footer;
   background-color: #242424;
@@ -171,8 +257,4 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #333;
-  
-  
-
-  
 }
