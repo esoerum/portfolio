@@ -21,7 +21,7 @@ export const createProject = async (project: ProjectProps) => {
     projectSchema.parse(project);
 
     return ofetch(url, {
-        method: "PUT",
+        method: "POST",
         body: JSON.stringify(project),
         headers: {
             "Content-Type": "application/json",
