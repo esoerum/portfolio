@@ -8,7 +8,7 @@ export type ProjectProps = {
     description: string;
     url?: string;
     createdAt?: Date;
-    isPublicProject?: boolean;
+    isPublicProject: boolean;
 }
 export type ProjectsProps = {
     projects: ProjectProps[];
