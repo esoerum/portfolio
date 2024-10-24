@@ -23,12 +23,12 @@ export default function Project(props: Readonly<PropsWithChildren<ProjectProps>>
                 {isPublicProject ? (
                     <>
                         <FaUnlock className="icon public" aria-label="Public project" />
-                        <span>Public project</span>
+                        <span>Public</span>
                     </>
                 ) : (
                     <>
                         <FaLock className="icon private" aria-label="Private project" />
-                        <span>Private project</span>
+                        <span>Private</span>
                     </>
                 )}
             </div>
