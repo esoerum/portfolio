@@ -214,9 +214,11 @@ input[type="checkbox"]:checked + .toggle-switch::after {
 .project-visibility {
   display: flex;
   align-items: center; /* Center icon and text vertically */
-  padding: 0.2rem 0.5rem; /* Optional padding */
+  padding: 0.3rem 0.6rem; /* Optional padding */
   border-radius: 12px;
   font-weight: bold;
+  background-color: #0066cc;
+  width: fit-content;
 }
 
 /* Public and private styles */
@@ -234,6 +236,9 @@ input[type="checkbox"]:checked + .toggle-switch::after {
 .icon {
   margin-right: 0.5rem; /* Space between icon and text */
   font-size: 1.2rem; /* Adjust icon size */
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
 }
 
 .icon.public {
