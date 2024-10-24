@@ -1,11 +1,12 @@
 import app  from "./app";
-import { port } from "./config";
+import { env } from "./lib/env";
+//import { port } from "./config";
 
 import { serve } from "@hono/node-server";
 
-console.log(`Server is running on port ${port}`);
+console.log(`Server is running on port ${env.PORT}`);
 
 serve({
   fetch: app.fetch,
-  port,
+  port: env.PORT,
 });
