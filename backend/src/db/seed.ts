@@ -10,12 +10,12 @@ export const seed = async (db: DB) => {
         INSERT INTO projects (id, title, category, description, url, is_public, created_at) 
         VALUES (@id, @title, @category, @description, @url, @isPublic, @createdAt)`);
 
-    const tr = db.transaction((projects: Project[]) => {
+    const seedTransaction = db.transaction((projects: Project[]) => {
         
         for (const project of projects) {
-            let proj = {...project, createdAt: project.createdAt?.toISOString(), isPublic: String(project.isPublic)};
-            insertProject.run(proj);
+            let tempProj = {...project, createdAt: project.createdAt?.toISOString(), isPublic: String(project.isPublic)};
+            insertProject.run(tempProj);
         }
     });
-    tr(projects);
+    seedTransaction(projects);
 };
