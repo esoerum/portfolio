@@ -8,8 +8,8 @@ const projectSchema = z.object({
     category: z.union([z.string(), z.array(z.string())]),
     description: z.string(),
     url: z.string().optional(),
-    createdAt: z.string().transform((str) => new Date(str)).optional(),
-    isPublic: z.boolean().optional(),
+    createdAt: z.string().datetime().transform((str) => new Date(str)),    
+    isPublic: z.boolean(),
 });
 
 const projectsSchema = z.array(projectSchema);
