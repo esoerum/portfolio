@@ -4,7 +4,7 @@ import type { Database } from "better-sqlite3";
 import BetterSqlite3 from "better-sqlite3";
 
 // Lager en instans av databasen
-export const db: Database = new BetterSqlite3(env.DATABASE_URL);
+export const db: Database = new BetterSqlite3(env.DATABASE_URL, {verbose: console.log});
 // Eksporterer databasen som en type så vi kan bruke den i repository
 export type DB = typeof db;
 

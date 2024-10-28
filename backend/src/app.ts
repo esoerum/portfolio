@@ -2,18 +2,11 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { UUID } from "node:crypto";
 import fs from "node:fs/promises";
+import { Project } from "./types";
 
 //Ha med V1 i /api/v1/projects
 
-type Project = {
-	id: UUID;
-	title: string;
-	category: string;
-	description: string;
-	url: string;
-	createdAt?: Date;
-	isPublic: boolean;
-};
+
 const app = new Hono();
 
 app.use("/*", cors());

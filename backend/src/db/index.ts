@@ -1,6 +1,6 @@
-// import db from "./db";
-// import { setup } from "./setup";
+import db from "./db";
+import { setup } from "./setup";
 
-// (async () => {
-//   await setup(db);
-// })();
+(async () => {
+  await setup(db);
+})();
