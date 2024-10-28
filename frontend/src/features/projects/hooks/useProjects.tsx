@@ -29,7 +29,7 @@ export function useProjects() {
         category: string,
         description: string,
         url: string,
-        isPublicProject: boolean
+        isPublic: boolean
     ) => {  
         try {
             const project = {
@@ -38,11 +38,11 @@ export function useProjects() {
                 category: category,
                 description: description,
                 url: url,
-                isPublicProject
+                isPublic
             };
             const response = await createProject(project);
             console.log("Created project:", response);
-            if (isPublicProject===true){
+            if (isPublic===true){
                 console.log("Public project");
             } else {
                 console.log("Private project");

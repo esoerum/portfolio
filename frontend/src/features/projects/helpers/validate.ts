@@ -11,7 +11,7 @@ const projectSchema = z.object({
     description: z.string(),
     url: z.string().optional(),
     createdAt: z.string().transform((str) => new Date(str)).optional(),
-    isPublicProject: z.boolean().optional(),
+    isPublic: z.boolean().optional(),
 });
 
 const projectsSchema = z.array(projectSchema);

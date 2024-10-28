@@ -8,7 +8,7 @@ export type ProjectProps = {
     description: string;
     url?: string;
     createdAt?: Date;
-    isPublicProject: boolean;
+    isPublic: boolean;
 }
 export type ProjectsProps = {
     projects: ProjectProps[];
@@ -16,11 +16,11 @@ export type ProjectsProps = {
 }
 
 export default function Project(props: Readonly<PropsWithChildren<ProjectProps>>) {
-    const { title, category, description, url, isPublicProject, children } = props
+    const { title, category, description, url, isPublic, children } = props
     return (
        <article className='project'>
         <div className="project-visibility">
-                {isPublicProject ? (
+                {isPublic ? (
                     <>
                         <FaUnlock className="icon public" aria-label="Public project" />
                         <span>Public</span>

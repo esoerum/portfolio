@@ -25,7 +25,7 @@ export default function Projects(
 									category={project.category}
 									description={project.description}
 									url={project.url}
-									isPublicProject={project.isPublicProject}
+									isPublic={project.isPublic}
 									
 								>
 									<p>

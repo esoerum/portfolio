@@ -5,7 +5,7 @@
     "category": "Scripting",
     "description": "Scripting and automation like a legend. In this project we will learn how to automate boring stuff with Python",
     "url": "www.example.com",
-    "isPublicProject": true,
+    "isPublic": true,
     "createdAt": "2024-10-23T12:11:58.461Z"
   },
   {
@@ -14,7 +14,7 @@
     "category": "react",
     "description": "Building web applications with modern technologies",
     "url": "www.example.com",
-    "isPublicProject": true,
+    "isPublic": true,
     "createdAt": "2024-10-23T12:12:13.165Z"
   }
 ]
