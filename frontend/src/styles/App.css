@@ -1,0 +1,265 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#main-container {
+  width: 100%;
+  display:grid;
+  grid-template-areas: "header"
+                        "main"
+                        "footer";
+  grid-template-columns: 1fr;
+  /* font-size: 1rem; */
+}
+#main-header {
+  grid-area: header;
+  background-color: #242424;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  
+
+}
+body {
+  width: 85%;
+  margin: 0 auto;
+  /*Skal jeg ha med denne? Tenk på det*/
+}
+#logo {
+  width: 150px; 
+  height: auto; 
+}
+nav ul {
+  display: flex;
+  list-style: none;
+
+}
+nav ul li {
+  margin-right: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  
+}
+a:hover {
+  color: f1f1f1;
+  text-decoration: underline;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem; */
+}
+#project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/*Project card styling*/
+#project-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+#project-list .project {
+  margin-bottom: 1.5rem;
+}
+.project {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px; 
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  list-style:none;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+.project h3 {
+  color: #2C2C2C; 
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.project p {
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.project a {
+  display: inline-block;
+  text-decoration: none;
+  color: #007ACC; 
+  font-weight: bold;
+  margin-top: 1rem; 
+  transition: color 0.2s ease; 
+}
+.project a:hover {
+  color: #005B99; 
+  text-decoration: underline; 
+}
+.project p.category {
+  font-style: italic;
+  color: #007ACC;
+  margin-bottom: 0.5rem;
+}
+.project-ul {
+  list-style: none;
+  padding: 0;
+}
+label {
+  display:block;
+  font-weight: bold;
+}
+input, textarea {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  
+}
+textarea {
+  height: 10rem;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+button {
+  display:block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  /* background-color: #333; */
+  background-color: #0066cc; /* Vivid Blue button */
+  /* color: #fff; */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005B99;
+
+}
+
+/* Toggle switch styles */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute; /* Make sure it's still in the DOM for interaction */
+}
+
+/* Custom toggle style */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Slider (the toggle knob) */
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When the checkbox is checked, change background and move the knob */
+input[type="checkbox"]:checked + .toggle-switch {
+  background-color: #007ACC;
+}
+
+input[type="checkbox"]:checked + .toggle-switch::after {
+  transform: translateX(26px);
+}
+
+/* Project visibility styles */
+.project-visibility {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  padding: 0.3rem 0.6rem; /* Optional padding */
+  border-radius: 12px;
+  font-weight: bold;
+  background-color: #0066cc;
+  width: fit-content;
+}
+
+/* Public and private styles */
+.project-visibility.public {
+  background-color: #007ACC; /* Blue for public projects */
+  color: #fff;
+}
+
+.project-visibility.private {
+  background-color: #FF5722; /* Red for private projects */
+  color: #fff;
+}
+
+/* Icon styles */
+.icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust icon size */
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.icon.public {
+  color: green; /* Color for public projects */
+}
+
+.icon.private {
+  color: red; /* Color for private projects */
+}
+
+.contact-button {
+  margin-bottom: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #242424;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+}
