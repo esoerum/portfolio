@@ -56,8 +56,7 @@ export function useProjects() {
     //Handling the removal of a project
     const handleOnRemoveProjectButtonClicked = useCallback(async (id: string) => {
         try {
-            const response = await deleteProject(id);
-            console.log(response.message);
+            await deleteProject(id);
             setProjectsList((projectsList) =>
                 projectsList.filter((project) => project.id !== id)
             );
