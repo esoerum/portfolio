@@ -1,7 +1,7 @@
 import { DB } from "./db";
 import { readFile } from "fs/promises";
-import { Project } from "../types";
-import { projectsSchema } from "../lib/validate";
+import { Project } from "../features/projects/types";
+import { projectsSchema } from "../features/projects/lib/validate";
 
 export const seed = async (db: DB) => {
     const file = await readFile("src/data/projects.json", "utf-8");
