@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { UUID } from "node:crypto";
 import fs from "node:fs/promises";
-import { Project } from "./types";
+import { Project } from "./features/projects/types";
 
 //Ha med V1 i /api/v1/projects
 
