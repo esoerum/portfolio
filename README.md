@@ -1,6 +1,14 @@
-Web applications - 2024 - Østfold University College
+# Web applications - 2024 - Østfold University College
 
-Second mandatory delievery building my portfolio during this course. Entering the React world. 
+Third mandatory delivery building my portfolio application during this course. Entering the React and fullstack world.
 
-pnpm run dev in root to start frontend/backend
 
+## Instructions  
+To create and seed the database:  
+```
+pnpm run backend:db:setup
+```
+To start frontend and backend:  
+```
+pnpm run dev
+```
