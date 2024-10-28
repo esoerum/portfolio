@@ -1,7 +1,7 @@
 import { ofetch } from "ofetch";
 import { ProjectProps } from "../components/Project";
 import { endpoints } from "../../../config/urls";
-import { projectSchema, projectsSchema } from "../helpers/validate";
+import { projectSchema, projectsSchema } from "../lib/validate";
 
 //API service for handling projects
 const url = endpoints.projects;

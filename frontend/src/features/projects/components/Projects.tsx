@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter, formatDistance } from "../helpers/format.ts";
+import { capitalizeFirstLetter, formatDistance } from "../lib/format.ts";
 import Project from "./Project.tsx";
 import { ProjectProps, ProjectsProps } from "./Project.tsx";
 import type { PropsWithChildren } from "react";
