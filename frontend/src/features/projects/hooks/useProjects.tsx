@@ -12,7 +12,7 @@ export function useProjects() {
         try {
             const projects = await fetchProjects();
             setProjectsList(projects);
-            console.log("Fetched projects:", projects);
+            // console.log("Fetched projects:", projects);
         } catch (error) {
             console.error("Error fetching projects:", error);
             console.log("Failed to fetch projects");
@@ -40,13 +40,13 @@ export function useProjects() {
                 url: url,
                 isPublic
             };
-            const response = await createProject(project);
-            console.log("Created project:", response);
-            if (isPublic===true){
-                console.log("Public project");
-            } else {
-                console.log("Private project");
-            }
+            await createProject(project);
+            // console.log("Created project:", response);
+            // if (isPublic===true){
+            //     console.log("Public project");
+            // } else {
+            //     console.log("Private project");
+            // }
             initializeData();
         } catch (error) {
             console.error("Error creating project:", error);
