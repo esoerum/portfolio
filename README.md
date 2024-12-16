@@ -4,9 +4,9 @@ Third mandatory delivery building my portfolio application during this course. E
 
 
 ## Instructions  
-To create and seed the database:  
+To install required packages, create .env-file and seed database from root:  
 ```
-pnpm run backend:db:setup
+pnpm run setup
 ```
 To start frontend and backend:  
 ```
