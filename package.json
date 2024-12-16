@@ -5,7 +5,8 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "dev": "concurrently -n frontend,backend -c green,blue \"pnpm run dev:frontend\" \"pnpm run dev:backend\" ",
-        "setup": "pnpm install && cd backend && pnpm install && echo DATABASE_URL=dev.db > .env && pnpm run db:setup && cd.. && cd frontend && pnpm install && cd.."
+        "setup": "pnpm install && cd backend && pnpm install && pnpm run db:setup && cd .. && cd frontend && pnpm install && cd .."
+
     },
     "dependencies": {
         "ofetch": "^1.4.0"
